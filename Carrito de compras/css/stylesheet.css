@@ -1,0 +1,51 @@
+/*HEADER*/
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header img{
+    max-block-size: 50px; 
+}
+.header svg{
+    max-width: 20px;
+}
+#iniciales{
+    background-color:#a632f0;
+    color: black;
+    padding: 1.2rem;
+    border-radius: 100%;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*VITRINA*/
+.vitrina{
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+/*NAME*/
+.name{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+/*CURSOS*/
+.cursos{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.curso1, .curso2, .curso3{
+    margin: 10px;
+}
+.curso1 button, .curso2 button, .curso3 button{
+    background-color: #a632f0;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 20%;
+}
