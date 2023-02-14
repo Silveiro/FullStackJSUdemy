@@ -28,8 +28,8 @@
 
 /*NAME*/
 .name{
-    margin-left: 20%;
-    margin-right: 20%;
+   
+    width: 50%;
 }
 /*CURSOS*/
 .cursos{
@@ -59,4 +59,7 @@
     background-color: white;
     height: 250px;
     width: 300px;
+    border:slategray;
+    border-style: solid;
+
 }
