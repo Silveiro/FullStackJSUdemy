@@ -113,15 +113,11 @@ for(let i = 0 ; i< userSelected.length; i++){
 
 function mostrarCarrito(){
     car.innerHTML = `<td> <tr> ${cart[0]}</tr><tr>Feto</tr></td>`;
-    console.log("0")
     if( car.style.display != "block"){
         car.style.display ="block";
-        console.log("1")
-    } else if(car.style.display != "none"){
+    } 
+    else if(car.style.display != "none"){
         car.style.display ="none";
-        console.log("2")
-    }else{
-        console.log("4")
     }
    
 
