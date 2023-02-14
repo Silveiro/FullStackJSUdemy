@@ -1,8 +1,9 @@
 //VARIABLES
 var user = prompt("cual es tu nombre?");
 var userSelected = document.getElementsByClassName("botoni");
-var car = document.querySelector("#carrinho");
+document.getElementById("carrinho").addEventListener("click", mostrarCarrito);
 var cart = [];
+var car = document.getElementById("carrinhoTable");
 
 
 //document.getElementsByClassName("curso")[0].firstElementChild.attributes[0].ownerElement.childNodes[1].src //
@@ -109,4 +110,20 @@ for(let i = 0 ; i< userSelected.length; i++){
 }
 })();
 
-car.innerHTML = `<td> <tr> ${cart[0]}</tr><tr>Feto</tr></td>`
+
+function mostrarCarrito(){
+    car.innerHTML = `<td> <tr> ${cart[0]}</tr><tr>Feto</tr></td>`;
+    console.log("0")
+    if( car.style.display != "block"){
+        car.style.display ="block";
+        console.log("1")
+    } else if(car.style.display != "none"){
+        car.style.display ="none";
+        console.log("2")
+    }else{
+        console.log("4")
+    }
+   
+
+
+}

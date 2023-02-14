@@ -51,10 +51,10 @@
 }
 
 /*Carrito*/
-#carrinho{
-    display: block;
-    position: relative;
-    top: 25px;
+
+#carrinhoTable{
+    position: absolute;
+    top: 95px;
     left: 70%;
     background-color: white;
     height: 250px;
