@@ -1,9 +1,13 @@
 //VARIABLES
 var user = prompt("cual es tu nombre?");
-var userSelected = document.getElementsByClassName("botoni");
 document.getElementById("carrinho").addEventListener("click", mostrarCarrito);
 var cart = [];
 var car = document.getElementById("carrinhoTable");
+var userSelected = [];
+const ArrayElements = (element, index) => {
+    console.log(`a[${index}] = ${element.id}`);
+    car.innerHTML = `<td><tr> ${element.id} </tr><tr>${element.info.nombre}</tr></td>`
+}
 
 
 //document.getElementsByClassName("curso")[0].firstElementChild.attributes[0].ownerElement.childNodes[1].src //
@@ -16,7 +20,7 @@ var curso1 = {
     id: "curso1",
     img: "/Carrito de compras/img/curso1.jpg",
     info:{
-        nombre: "HTML y CSS intermedio",
+        nombre: "HTML y CSS básico",
         description:"Aprende a renderizar aplicaciones web nivel intermedio.",
         price:"COP $240.000"
     }
@@ -34,7 +38,7 @@ var curso3 = {
     id: "curso3",
     img: "/Carrito de compras/img/curso3.jpg",
     info:{
-        nombre: "HTML y CSS intermedio",
+        nombre: "HTML y CSS avanzado",
         description:"Aprende a renderizar aplicaciones web nivel intermedio.",
         price:"COP $230.000"
     }
@@ -45,9 +49,9 @@ var curso3 = {
 var cur1 = document.getElementById("curso1");
 var cur2 = document.getElementById("curso2");
 var cur3 = document.getElementById("curso3");
-window.onload = loadCurso;
 
-function loadCurso(){
+
+(function loadCurso(){
     console.log("load")
 cur1.innerHTML = `<div class="imagen"> 
 <img src="${curso1.img}" alt="curso1">
@@ -78,7 +82,7 @@ cur3.innerHTML = `<div class="imagen">
 <p>${curso3.info.price}</p>
 <button class="botoni">Agregar al carrito</button>
 </div>
-`;}
+`;})();
 
 
 //FUNCIONES 
@@ -95,31 +99,43 @@ function inic2(x){
     document.getElementById("nameMain").innerHTML = "Let's start learning, "+ letter;
 }
 
-function agrega (e){
-    e.preventDefault();
-    console.log(e);
-}
 
-(function(){
-    
-for(let i = 0 ; i< userSelected.length; i++){
-    userSelected[i].addEventListener("click", function(){
-        cart.push(userSelected[i]);
-        console.log(cart)
-    })
-}
-})();
+
+
 
 
 function mostrarCarrito(){
-    car.innerHTML = `<td> <tr> ${cart[0]}</tr><tr>Feto</tr></td>`;
+    cart.forEach(ArrayElements);
+    
+   
+
     if( car.style.display != "block"){
         car.style.display ="block";
     } 
     else if(car.style.display != "none"){
         car.style.display ="none";
     }
-   
+}
 
+window.onload = function(){
+    userSelected = document.querySelectorAll(".botoni");
+    userSelected.forEach(element => {
+        addEventListener("click",AgregarCarrito);
+    })
+    console.log(userSelected);
 
+}
+
+function AgregarCarrito(e){
+console.log(e.explicitOriginalTarget.parentElement.parentElement)
+var element = e.explicitOriginalTarget.parentElement.parentElement.id;
+if(element === "curso1"){
+cart.push(curso1)
+}else if(element === "curso2"){
+cart.push(curso2)
+}else if(element === "curso3"){
+cart.push(curso3)
+}else{}
+
+console.log(cart)
 }
