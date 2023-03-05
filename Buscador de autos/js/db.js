@@ -3,172 +3,209 @@ const autos = [
 		marca: 'BMW',
 		modelo: 'Serie 3',
 		year: 2020,
-		precio: 30000,
+		precio: "$30.000",
+		preciolast: "$40.000",
 		puertas: 4,
 		color: 'Blanco',
-		transmision: 'automatico'
+		transmision: 'automatico',
+		img: "./img/auto1.jpg"
 	},
 	{ 
         marca: 'Audi', 
         modelo: 'A4', 
         year: 2020, 
-        precio: 40000, 
+        precio: "$40.000",
+		preciolast: "$50.000", 
         puertas: 4, 
         color: 'Negro', 
-        transmision: 'automatico' 
+        transmision: 'automatico',
+		img:"./img/auto2.jpg"
     },
 	{
 		marca: 'Ford',
 		modelo: 'Mustang',
 		year: 2015,
-		precio: 20000,
+		precio: "$20.000",
+		preciolast: "$30.000",
 		puertas: 2,
 		color: 'Blanco',
-		transmision: 'automatico'
+		transmision: 'automatico',
+		img: "./img/auto3.jpg"
 	},
 	{ 
         marca: 'Audi', 
         modelo: 'A6', 
         year: 2020, 
-        precio: 35000, 
+        precio: "$35.000",
+		preciolast: "$45.000", 
         puertas: 4, 
         color: 'Negro', 
-        transmision: 'automatico' 
+        transmision: 'automatico' ,
+		img: "./img/auto4.jpg"
     },
 	{
 		marca: 'BMW',
 		modelo: 'Serie 5',
 		year: 2016,
-		precio: 70000,
+		precio: "$70.000",
+		preciolast: "$85.000", 
 		puertas: 4,
 		color: 'Rojo',
-		transmision: 'automatico'
+		transmision: 'automatico',
+		img: "./img/auto5.jpg"
 	},
 	{
 		marca: 'Mercedes Benz',
 		modelo: 'Clase C',
 		year: 2015,
-		precio: 25000,
+		precio: "$25.000",
+		preciolast: "$35.000", 
 		puertas: 4,
 		color: 'Blanco',
-		transmision: 'automatico'
+		transmision: 'automatico',
+		img: "./img/auto6.jpg"
 	},
 	{
 		marca: 'Chevrolet',
 		modelo: 'Camaro',
 		year: 2018,
-		precio: 60000,
+		precio: "$60.000",
+		preciolast: "$65.000", 
 		puertas: 2,
 		color: 'Rojo',
-		transmision: 'manual'
+		transmision: 'manual',
+		img: "./img/auto7.jpg"
 	},
 	{ 
         marca: 'Ford', 
         modelo: 'Mustang', 
         year: 2019, 
-        precio: 80000, 
+        precio: "$80.000", 
+		preciolast: "$85.000", 
         puertas: 2, 
         color: 'Rojo', 
-        transmision: 'manual' 
+        transmision: 'manual' ,
+		img: "./img/auto8.jpg"
     },
 	{
 		marca: 'Dodge',
 		modelo: 'Challenger',
 		year: 2020,
-		precio: 40000,
+		precio: "$40.000",
+		preciolast: "$45.000", 
 		puertas: 4,
 		color: 'Blanco',
-		transmision: 'automatico'
+		transmision: 'automatico',
+		img: "./img/auto9.jpg"
 	},
 	{ 
         marca: 'Audi', 
         modelo: 'A3', 
         year: 2017, 
-        precio: 55000, 
+        precio: "$55.000",
+		preciolast: "$65.000",  
         puertas: 2, 
         color: 'Negro', 
-        transmision: 
-        'manual' 
+        transmision: 'manual' ,
+		img: "./img/auto10.jpg"
     },
 	{
 		marca: 'Dodge',
 		modelo: 'Challenger',
 		year: 2020,
-		precio: 25000,
+		precio: "$25.000",
+		preciolast: "$35.000", 
 		puertas: 2,
 		color: 'Rojo',
-		transmision: 'manual'
+		transmision: 'manual',
+		img: "./img/auto11.jpg"
 	},
 	{
 		marca: 'Mercedes Benz',
 		modelo: 'Clase C',
 		year: 2018,
-		precio: 45000,
+		precio: "$45.000",
+		preciolast: "$55.000", 
 		puertas: 4,
 		color: 'Azul',
-		transmision: 'automatico'
+		transmision: 'automatico',
+		img: "./img/auto12.jpg"
 	},
 	{
 		marca: 'BMW',
 		modelo: 'Serie 5',
 		year: 2019,
-		precio: 90000,
+		precio: "$90.000",
+		preciolast: "$95.000", 
 		puertas: 4,
 		color: 'Blanco',
-		transmision: 'automatico'
+		transmision: 'automatico',
+		img: "./img/auto13.jpg"
 	},
 	{ 
         marca: 'Ford', 
         modelo: 'Mustang', 
         year: 2017, 
-        precio: 60000, 
+        precio: "$60.000",
+		preciolast: "$65.000",  
         puertas: 2, 
         color: 'Negro', 
-        transmision: 'manual' 
+        transmision: 'manual' ,
+		img: "./img/auto14.jpg"
     },
 	{
 		marca: 'Dodge',
 		modelo: 'Challenger',
 		year: 2015,
-		precio: 35000,
+		precio: "$35.000",
+		preciolast: "$45.000", 
 		puertas: 2,
 		color: 'Azul',
-		transmision: 'automatico'
+		transmision: 'automatico',
+		img: "./img/auto15.jpg"
 	},
 	{
 		marca: 'BMW',
 		modelo: 'Serie 3',
 		year: 2018,
-		precio: 50000,
+		precio: "$50.000",
+		preciolast: "$55.000", 
 		puertas: 4,
 		color: 'Blanco',
-		transmision: 'automatico'
+		transmision: 'automatico',
+		img: "./img/auto16.jpg"
 	},
 	{
 		marca: 'BMW',
 		modelo: 'Serie 5',
 		year: 2017,
-		precio: 80000,
+		precio: "$80.000",
+		preciolast: "$85.000", 
 		puertas: 4,
 		color: 'Negro',
-		transmision: 'automatico'
+		transmision: 'automatico',
+		img: "./img/auto17.jpg"
 	},
 	{
 		marca: 'Mercedes Benz',
 		modelo: 'Clase C',
 		year: 2018,
-		precio: 40000,
+		precio: "$40.000",
+		preciolast: "$45.000", 
 		puertas: 4,
 		color: 'Blanco',
-		transmision: 'automatico'
+		transmision: 'automatico',
+		img: "./img/auto18.jpg"
 	},
 	{ 
         marca: 'Audi', 
         modelo: 'A4', 
         year: 2016, 
-        precio: 30000, 
+        precio: "$30.000",
+		preciolast: "$45.000",  
         puertas: 4, 
         color: 'Azul', 
-        transmision: 'automatico' 
+        transmision: 'automatico' ,
+		img: "./img/auto19.jpg"
     }
 ];

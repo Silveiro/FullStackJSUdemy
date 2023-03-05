@@ -48,15 +48,47 @@ color.addEventListener("change", e => { datosBusqueda.color = e.target.value; fi
 function mostrarAutos(autos) {
     limpiarHTML(); //elimina el HTML previo
     autos.forEach(auto => {
-        const { marca, modelo, year, puertas, transmision, precio, color } = auto
-        const autoHTML = document.createElement("p");
-        autoHTML.textContent = `
-        ${marca}${modelo} - ${year} - ${puertas}Puertas - Transmisión: ${transmision} Precio:${precio} Color:${color}
+        const { marca, modelo, year, puertas, transmision, precio, color,preciolast } = auto
+        const divautito = document.createElement("div");
+        divautito.setAttribute("id", "autini")
+        const autotitulo = document.createElement("h2");
+        const autosubtitulo = document.createElement("p");
+        autosubtitulo.setAttribute("id","subtitulo");
+        const autoprecio = document.createElement("p");
+        autoprecio.setAttribute("id","autoprecio");
+        const autopreciolast =document.createElement("p");
+        autopreciolast.setAttribute("id","autopreciolast");
+        const autoimg = document.createElement("img");
+        autoimg.setAttribute("id","autoimagen")
+        autotitulo.textContent = `
+        ${marca}  ${modelo} 
+        `; 
+        autosubtitulo.textContent = `
+        ${year} - ${puertas}Puertas - Transmisión: ${transmision} Color:${color}
+
         `;
+        autoprecio.textContent = `
+        ${precio}
+        `; 
+        autopreciolast.textContent = `
+        ${preciolast}
+        `; 
+
+        autoimg.src = auto.img;
 
 
         //insertar el HTML 
-        resultado.appendChild(autoHTML);
+        resultado.appendChild(divautito);
+        divautito.appendChild(autoimg);
+        divautito.appendChild(autotitulo);
+        divautito.appendChild(autosubtitulo);
+        divautito.appendChild(autoprecio);
+        divautito.appendChild(autopreciolast);
+
+
+
+        
+
     });
 }
 

@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    background-image: linear-gradient(to right, #011a31 0%, #003d40 100%);
     font-family: 'Staatliches', cursive;
 }
 html {
@@ -10,6 +10,14 @@ h1 {
     font-size: 6rem;
     padding: 3rem 0;
     margin: 0;
+    color:#cdcccc;
+}
+h2{
+    font-family: 'Staatliches', cursive;
+    font-size: 6rem;
+    padding: 3rem 0;
+    margin: 0;
+    color:#cdcccc;
 }
 .contenedor {
     background-color: white;
@@ -19,9 +27,7 @@ h1 {
 p {
     font-size: 2rem;
 }
-h1, p {
-    text-align: center;
-}
+
 form {
     max-width: 1100px;
     margin: 0 auto;
@@ -35,10 +41,10 @@ form {
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
 }
-#resultado p {
-    margin: 0;
-    padding: 2rem;
-    border-bottom: 1px solid #e1e1e1;
+#resultado  {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 33% 33% 33%;
 }
 #resultado p span {
     font-weight: bold;
@@ -46,6 +52,34 @@ form {
 #resultado p:last-of-type{
     border: none;
 }
+#resultado img {
+    margin: auto;
+    padding: auto;
+    max-width: 200px;
+
+}
+#autini{
+    display: flex;
+    flex-direction: column;
+    margin: 5% 5% 5% 5%;
+    padding: 3rem;
+    border: solid 1px;
+    border-color:  #e1e1e1;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10%;
+}
+#autini p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+}
+#autoprecio{
+    color: rgb(112, 112, 249);
+}
+#autopreciolast{
+    text-decoration: line-through;
+}
+
+
 .alerta {
     padding: 1rem;
     text-align: center;
