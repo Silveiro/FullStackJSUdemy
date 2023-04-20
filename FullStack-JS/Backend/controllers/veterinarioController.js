@@ -2,14 +2,7 @@ import { error } from "node:console";
 import Veterinario from "../Models/Veterinario.js";
 
 const registrar = async (req,res) => {
-    const { createHmac } = await import('node:crypto');
-
-    var {password} = req.body;
-    const hash = createHmac('sha256', password)
-                   .update('I love cupcakes')
-                   .digest('hex');
-    req.body.password = hash;
-    console.log(password)
+    
 
     const {email} = req.body;
     const existeUsuario = await Veterinario.findOne({email});
@@ -55,8 +48,25 @@ const confirmar = async (req, res) =>{
 }
 
 const autenticar = async (req,res) =>{
-    const {email} = req.body;
+    const {email,password} = req.body;
+    //comprobar si el usuario existe
     const usuario = await Veterinario.findOne({email});
+    
+    if(!usuario){
+        const error = new Error("El Usuario NO existe")
+       return  res.json({msg: "El usuario NO existe"})
+    }
+    if(usuario.confirmado === false){
+        const error = new Error("Tu cuenta NO ha sido confirmada")
+        return res.json({msg: "El usuario NO Ha confirmado"})
+    }
+    if(await usuario.comprobarPassword(password)){
+        return res.json({msg: "Password Correcto"});
+        
+    }else{
+        return res.json({msg: "Password Inorrecto"});        
+    }
+
 }
 
 
